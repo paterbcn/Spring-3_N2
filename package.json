@@ -1,0 +1,14 @@
+{
+  "name": "entrega3.1n2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Clase_jugador.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
