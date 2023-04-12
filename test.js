@@ -1,4 +1,6 @@
-const { ScoreBoard } = require( "./clase_tablero" );
+
+const prompt = require("prompt-sync")();
+/* const { ScoreBoard } = require( "./clase_tablero" );
 const ob = {};
 
 
@@ -17,7 +19,7 @@ console.log( board.players );
 
 
 playGame(){return};
-
+ */
 /*
 
       for ( const i, i< 4, i++) {
@@ -34,7 +36,7 @@ for ( var i = 0 ,) {
         let playerSelect = Math.floor( Math.random() * this.playerNum );
         console.log( this.players[ playerSelect ].name );
 */
-        playGame () {
+        /* playGame () {
           console.log( `La Partida ha comenzado` );
           console.log( this.scoreBoard.players );
           for ( let i = 0; i < 10; i++ ) {
@@ -85,14 +87,14 @@ for ( var i = 0 ,) {
         punishment(players){
           let unluckyNumber = this.rollDice()
           if (this.rollDice() === 0){
-            /* let playerSelect = Math.floor(Math.random() * players);
+            let playerSelect = Math.floor(Math.random() * players);
             let playerSelectName = this.players[playerSelect].name;
-            let playerSelectscore = 0  */
+            let playerSelectscore = 0 
             console.log("unluki")
           }
         }
 
-        /* playGame() {
+        /playGame() {
           console.log(`La Partida ha comenzado`);
           console.log(this.scoreBoard.players);
           const scorePlayers = this.scoreBoard.players
@@ -108,4 +110,18 @@ for ( var i = 0 ,) {
             scorePlayers[playerSelectName] = playerSelectscore;
             console.log(this.scoreBoard.players);
           }
-        } */
+        } 
+ */
+        function finishGame(){
+          let answer = prompt (`Quieres juagar otra partida (y/n)`).toLowerCase()
+          let checkAnswer = answer !== "y" && answer !== "n"
+          while(checkAnswer){
+            console.log(`tienes que responder (s/n)`)
+            answer = prompt (`Quieres juagar otra partida (y/n)`).toLowerCase()
+            checkAnswer = answer !== "y" && answer !== "n"
+          }
+          if (answer ==="y" ){this.runGame()}
+          console.log(`juego finalizado`)
+        }
+
+        finishGame()

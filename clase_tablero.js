@@ -1,8 +1,15 @@
 class ScoreBoard {
-    constructor ( name ) {
-        this.players = {};
-        this.namePar = name;
-    }
+    constructor ( ) {
+        if(ScoreBoard.instancia){
+            return this
+        }
+        ScoreBoard.instancia =this
+        
+   }
+
+   players={};
+
+   
 }
 
 module.exports = {
